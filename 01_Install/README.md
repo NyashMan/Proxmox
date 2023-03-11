@@ -11,5 +11,6 @@
 - Проверьте совместимость вашего оборудования на соответствие [минимальным системным требованиям](https://www.proxmox.com/en/proxmox-ve/requirements/) (при сценарии установки системы на реальное оборудование)
 
 ## Скачивание и установка
+Переходим на официальный сайт по ссылке: https://www.proxmox.com/
 ![image](https://user-images.githubusercontent.com/1348639/224510137-314a1328-a1d5-41b0-8bb4-ac0380cc596c.png)
 ![image](https://user-images.githubusercontent.com/1348639/224510159-4eb87a11-d04a-4e17-a701-7c8bc070e52d.png)
