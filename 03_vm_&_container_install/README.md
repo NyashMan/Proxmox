@@ -67,4 +67,17 @@
 ![image](https://github.com/NyashMan/Proxmox/assets/1348639/07d0b3c0-7ba0-4807-ba05-606e251a74c8)
 ![image](https://github.com/NyashMan/Proxmox/assets/1348639/f32e4664-69e0-4f2e-b68b-f186fed5b3c5)
 
-## Разгрузка шаблона контейнера
+## Развёртка шаблона контейнера
+
+
+## Удаление ВМ/Контейнера
+
+- Процесс удаление виртуальной машины
+![image](https://github.com/NyashMan/Proxmox/assets/1348639/8244e133-da1e-491f-a3d3-ba5068b0f6ce)
+- Для полного удаления машины из сервера виртуализации, необходимо выполнить подтверждение действий.
+Необходимо ввести ID виртуальной машины (в данном случае 100) и выделить чекбоксы ниже (Purge from job configuration, Destroy unreferenced disks owned by guest) -> Remove
+![image](https://github.com/NyashMan/Proxmox/assets/1348639/da87da51-2fc5-49d8-9d87-e70eb3532bf7)
+- После проделанных операций, удаление ВМ должно завершиться успешно.
+
+- Процесс удаления контейнера
+
