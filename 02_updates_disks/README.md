@@ -20,6 +20,30 @@
 ![image](https://user-images.githubusercontent.com/1348639/225053648-b8112eb1-211f-438d-afd3-8044d469a57c.png)
 ![image](https://user-images.githubusercontent.com/1348639/225053924-90fe05b5-656a-451d-8236-87016d7fa3dd.png)
 ![image](https://user-images.githubusercontent.com/1348639/225054309-e741119f-a208-491e-92c0-a8d2e6411b2d.png)
+
+## Убираем "No Subscription" баннер
+Заходим через SSH на нашу ноду (именно через ssh, если зайдёте через браузер, у вас не будут работать горячие клавиши) и делаем резервную копию файла:  
+```
+cp /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js.bak
+```
+Переходим в редактирование файла:  
+```
+nano /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js
+```
+В файле ищем строчку с использованием сочитания клавиш ctrl+w "**No valid subscription**" (без кавычек) и жмём **enter**:  
+![image](https://github.com/NyashMan/Proxmox/assets/1348639/0ef78944-50af-4c91-b7cd-226466623e1a)
+Далее необходимо найти строчку ** .data.status.toLowerCase() !== 'active') {** (находится на 2 строчке над искомой ранее)
+![image](https://github.com/NyashMan/Proxmox/assets/1348639/0fe7b134-2714-4cc0-beed-229bb6c60935)  
+Вам необходимо удалить знак **!** перед двумя знаками **==**, чтобы строчка выглядила следующим образом:  
+![image](https://github.com/NyashMan/Proxmox/assets/1348639/35bc9f01-193f-4bb8-a5a4-866aec7b8788)  
+
+Сохраняем содержимое файла (ctrl + o ctrl + x) и перезагружаем веб-интерфейс Proxmox:
+
+```
+systemctl restart pveproxy.service
+```
+После проделанных манипуляций перезагружаем вкладку с сервером и логинимся. Как видно - баннер больше не появляется.  
+
 ## Создание локального storage
 - Для дальнейшей работы с виртуальными машинами, необходимо создать дисковое хранилище. В случае работы на виртуальной машине - диски будут виртуальные (созданные ранее)
 ![image](https://user-images.githubusercontent.com/1348639/225055577-daafa0a1-18f3-495b-bf7f-1956b32f953a.png)
