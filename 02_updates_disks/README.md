@@ -32,7 +32,7 @@ nano /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js
 ```
 В файле ищем строчку с использованием сочитания клавиш ctrl+w "**No valid subscription**" (без кавычек) и жмём **enter**:  
 ![image](https://github.com/NyashMan/Proxmox/assets/1348639/0ef78944-50af-4c91-b7cd-226466623e1a)  
-Далее необходимо найти строчку ** .data.status.toLowerCase() !== 'active') {** (находится на 2 строчке над искомой ранее)  
+Далее необходимо найти строчку **.data.status.toLowerCase() !== 'active') {** (находится на 2 строчке над искомой ранее)  
 ![image](https://github.com/NyashMan/Proxmox/assets/1348639/0fe7b134-2714-4cc0-beed-229bb6c60935)  
 Вам необходимо удалить знак **!** перед двумя знаками **==**, чтобы строчка выглядила следующим образом:  
 ![image](https://github.com/NyashMan/Proxmox/assets/1348639/35bc9f01-193f-4bb8-a5a4-866aec7b8788)  
